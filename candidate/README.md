@@ -62,7 +62,7 @@ your-submission/
 
 Reply to the assessment invitation email with a link to your repository or attach your zip file. Use subject line `SPHERES IT Assessment — [Your Name]`.
 
-For clarifying questions (max one per task), email bwidhiyanto@oucru.org or mputra@oucru.org.
+For clarifying questions (max one per task), reply to the invitation email.
 
 ---
 

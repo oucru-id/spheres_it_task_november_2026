@@ -1,0 +1,136 @@
+{
+  "patients": 3452,
+  "anomaly_info": {
+    "a3_count": 200,
+    "a4_groups": 150,
+    "a5_pairs": 80,
+    "a8_count": 30
+  },
+  "visit_stats": {
+    "total_visits": 18724,
+    "total_registrations": 18724,
+    "total_dispensing": 10118,
+    "a1_multi_poly_count": 1065,
+    "a2_cancelled_count": 674,
+    "a6_retry_dup_count": 279,
+    "a7_affected_visits": 1440
+  },
+  "naive_results": [
+    {
+      "clinic_id": "PKM-001",
+      "month": "2026-01",
+      "total_visits": 1518,
+      "unique_patients_by_nik": 857
+    },
+    {
+      "clinic_id": "PKM-001",
+      "month": "2026-02",
+      "total_visits": 1528,
+      "unique_patients_by_nik": 869
+    },
+    {
+      "clinic_id": "PKM-001",
+      "month": "2026-03",
+      "total_visits": 1471,
+      "unique_patients_by_nik": 829
+    },
+    {
+      "clinic_id": "PKM-001",
+      "month": "2026-04",
+      "total_visits": 1513,
+      "unique_patients_by_nik": 861
+    },
+    {
+      "clinic_id": "PKM-001",
+      "month": "2026-05",
+      "total_visits": 1611,
+      "unique_patients_by_nik": 897
+    },
+    {
+      "clinic_id": "PKM-001",
+      "month": "2026-06",
+      "total_visits": 1722,
+      "unique_patients_by_nik": 908
+    },
+    {
+      "clinic_id": "PKM-002",
+      "month": "2026-04",
+      "total_visits": 796,
+      "unique_patients_by_nik": 448
+    },
+    {
+      "clinic_id": "PKM-002",
+      "month": "2026-05",
+      "total_visits": 695,
+      "unique_patients_by_nik": 400
+    },
+    {
+      "clinic_id": "PKM-002",
+      "month": "2026-06",
+      "total_visits": 807,
+      "unique_patients_by_nik": 438
+    },
+    {
+      "clinic_id": "PKM-002-OLD",
+      "month": "2026-01",
+      "total_visits": 782,
+      "unique_patients_by_nik": 450
+    },
+    {
+      "clinic_id": "PKM-002-OLD",
+      "month": "2026-02",
+      "total_visits": 827,
+      "unique_patients_by_nik": 430
+    },
+    {
+      "clinic_id": "PKM-002-OLD",
+      "month": "2026-03",
+      "total_visits": 811,
+      "unique_patients_by_nik": 430
+    },
+    {
+      "clinic_id": "PKM-003",
+      "month": "2026-01",
+      "total_visits": 861,
+      "unique_patients_by_nik": 485
+    },
+    {
+      "clinic_id": "PKM-003",
+      "month": "2026-02",
+      "total_visits": 677,
+      "unique_patients_by_nik": 398
+    },
+    {
+      "clinic_id": "PKM-003",
+      "month": "2026-03",
+      "total_visits": 782,
+      "unique_patients_by_nik": 459
+    },
+    {
+      "clinic_id": "PKM-003",
+      "month": "2026-04",
+      "total_visits": 760,
+      "unique_patients_by_nik": 433
+    },
+    {
+      "clinic_id": "PKM-003",
+      "month": "2026-05",
+      "total_visits": 816,
+      "unique_patients_by_nik": 448
+    },
+    {
+      "clinic_id": "PKM-003",
+      "month": "2026-06",
+      "total_visits": 747,
+      "unique_patients_by_nik": 431
+    }
+  ],
+  "anomaly_counts": {
+    "a2_cancelled_registrations": 680,
+    "a3_placeholder_nik_patients": 303,
+    "a6_duplicate_reg_numbers": 279,
+    "a8_implausible_future": 16,
+    "a8_implausible_old": 14,
+    "a9_facility_name_variants": 2
+  }
+}

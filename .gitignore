@@ -8,3 +8,4 @@ __pycache__/
 data/*.db
 .claude/
 pompt.md
+claude-code-prompt-*.md

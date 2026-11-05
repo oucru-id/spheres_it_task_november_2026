@@ -6,7 +6,8 @@
 |-----------|--------|
 | Task 1 (required) | 35% |
 | Chosen task (Task 2 or Task 3) | 35% |
-| Follow-up call | 30% |
+| Take-home walkthrough (follow-up call) | 15% |
+| Live coding session (follow-up call) | 15% |
 
 Both optional tasks scored out of 100. Candidates who chose differently are compared directly. No extra points for completing a third task.
 
@@ -164,7 +165,7 @@ Both optional tasks scored out of 100. Candidates who chose differently are comp
 
 ---
 
-## Follow-Up Call (scored separately, 30% of final)
+## Take-Home Walkthrough (15% of final)
 
 Scored holistically, not per-question. Signals:
 
@@ -175,3 +176,21 @@ Scored holistically, not per-question. Signals:
 | Depth | Answers follow-ups without prompting | Only surface-level answers |
 | Honesty | "I didn't know X, so I looked it up" | Pretends to know everything |
 | AI awareness | "AI suggested X but I changed it because Y" | Can't identify what AI contributed |
+
+---
+
+## Live Coding Session (15% of final)
+
+30 minutes, one problem, no AI tools. See `interview/live-coding/scoring-sheet.md` for detailed scoring.
+
+| Area | Weight (within this 15%) |
+|------|--------------------------|
+| Clarifying questions | 15% |
+| Approach before coding | 15% |
+| Correctness | 25% |
+| Edge cases | 20% |
+| Testing own code | 10% |
+| Communication | 10% |
+| Twist response | 5% |
+
+Hints reduce the score (see scoring sheet for specifics). A candidate who reasons well but doesn't finish can still meet expectations.

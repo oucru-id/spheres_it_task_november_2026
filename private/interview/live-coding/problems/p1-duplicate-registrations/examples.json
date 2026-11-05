@@ -1,0 +1,37 @@
+{
+  "example_1": {
+    "description": "Basic case from statement",
+    "input": [
+      {"registration_id": "R1", "patient_id": "P100", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:00:00+08:00"},
+      {"registration_id": "R2", "patient_id": "P100", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:03:00+08:00"},
+      {"registration_id": "R3", "patient_id": "P100", "puskesmas_id": "PKM-002", "registered_at": "2026-03-15T10:01:00+08:00"},
+      {"registration_id": "R4", "patient_id": null,   "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:01:00+08:00"}
+    ],
+    "expected_output": ["R2"]
+  },
+  "example_2": {
+    "description": "Chaining: 10:00, 10:04, 10:08",
+    "input": [
+      {"registration_id": "R1", "patient_id": "P200", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:00:00+08:00"},
+      {"registration_id": "R2", "patient_id": "P200", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:04:00+08:00"},
+      {"registration_id": "R3", "patient_id": "P200", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:08:00+08:00"}
+    ],
+    "expected_output": ["R2"]
+  },
+  "example_3": {
+    "description": "Exactly 5 minutes apart (inclusive)",
+    "input": [
+      {"registration_id": "R1", "patient_id": "P300", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:00:00+08:00"},
+      {"registration_id": "R2", "patient_id": "P300", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T10:05:00+08:00"}
+    ],
+    "expected_output": ["R2"]
+  },
+  "example_4": {
+    "description": "Crossing midnight",
+    "input": [
+      {"registration_id": "R1", "patient_id": "P400", "puskesmas_id": "PKM-001", "registered_at": "2026-03-15T23:58:00+08:00"},
+      {"registration_id": "R2", "patient_id": "P400", "puskesmas_id": "PKM-001", "registered_at": "2026-03-16T00:01:00+08:00"}
+    ],
+    "expected_output": ["R2"]
+  }
+}

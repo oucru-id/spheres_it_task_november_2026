@@ -1,0 +1,29 @@
+{
+  "example_1": {
+    "description": "Basic case from statement",
+    "starting_stock": {"MED-001": 10},
+    "events": [
+      {"medicine_id": "MED-001", "type": "out", "quantity": 8, "timestamp": "2026-03-15T09:00:00"},
+      {"medicine_id": "MED-001", "type": "out", "quantity": 5, "timestamp": "2026-03-15T10:00:00"},
+      {"medicine_id": "MED-001", "type": "in",  "quantity": 20, "timestamp": "2026-03-15T11:00:00"}
+    ],
+    "expected_output": {"MED-001": "2026-03-15T10:00:00"}
+  },
+  "example_2": {
+    "description": "Never goes negative",
+    "starting_stock": {"MED-001": 100},
+    "events": [
+      {"medicine_id": "MED-001", "type": "out", "quantity": 10, "timestamp": "2026-03-15T09:00:00"}
+    ],
+    "expected_output": {}
+  },
+  "example_3": {
+    "description": "Two medicines, only one goes negative",
+    "starting_stock": {"MED-001": 10, "MED-002": 5},
+    "events": [
+      {"medicine_id": "MED-001", "type": "out", "quantity": 3, "timestamp": "2026-03-15T09:00:00"},
+      {"medicine_id": "MED-002", "type": "out", "quantity": 8, "timestamp": "2026-03-15T09:30:00"}
+    ],
+    "expected_output": {"MED-002": "2026-03-15T09:30:00"}
+  }
+}

@@ -100,15 +100,23 @@ Compare against `private/task3-answer-key/good-clarifying-questions.md`:
 
 Use `private/rubrics.md` Task 3 rubric.
 
-## Follow-Up Call
+## Follow-Up Call (60-75 minutes total)
 
-Use `private/interview-guide.md` for the 45-minute call.
-Score using the call rubric in `private/rubrics.md`.
+### Part 1: Take-Home Walkthrough (35-40 minutes)
+
+Use `private/interview-guide.md` for the walkthrough script.
+Score using the take-home walkthrough rubric in `private/rubrics.md`.
+
+### Part 2: Live Coding Session (30 minutes)
+
+Use `private/interview/live-coding/README.md` for the session guide.
+Pick one problem from `private/interview/live-coding/problems/`.
+Fill in `private/interview/live-coding/scoring-sheet.md` immediately after.
 
 ## Final Score
 
 ```
-Final = (Task 1 score × 0.35) + (Chosen task score × 0.35) + (Call score × 0.30)
+Final = (Task 1 score x 0.35) + (Chosen task score x 0.35) + (Walkthrough x 0.15) + (Live coding x 0.15)
 ```
 
 Both optional tasks are scored out of 100, so candidates who chose differently are directly comparable.

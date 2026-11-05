@@ -1,0 +1,38 @@
+{
+  "example_1": {
+    "description": "Basic case from statement",
+    "input": [
+      {"patient_id": "P1", "visit_date": "2026-01-01"},
+      {"patient_id": "P1", "visit_date": "2026-01-10"},
+      {"patient_id": "P1", "visit_date": "2026-01-30"},
+      {"patient_id": "P1", "visit_date": "2026-02-05"}
+    ],
+    "expected_output": [
+      {"patient_id": "P1", "start_date": "2026-01-01", "end_date": "2026-01-10", "visit_count": 2},
+      {"patient_id": "P1", "start_date": "2026-01-30", "end_date": "2026-02-05", "visit_count": 2}
+    ]
+  },
+  "example_2": {
+    "description": "Single visit",
+    "input": [
+      {"patient_id": "P1", "visit_date": "2026-03-15"}
+    ],
+    "expected_output": [
+      {"patient_id": "P1", "start_date": "2026-03-15", "end_date": "2026-03-15", "visit_count": 1}
+    ]
+  },
+  "example_3": {
+    "description": "Two patients",
+    "input": [
+      {"patient_id": "P1", "visit_date": "2026-01-01"},
+      {"patient_id": "P2", "visit_date": "2026-01-02"},
+      {"patient_id": "P1", "visit_date": "2026-01-05"},
+      {"patient_id": "P2", "visit_date": "2026-02-01"}
+    ],
+    "expected_output": [
+      {"patient_id": "P1", "start_date": "2026-01-01", "end_date": "2026-01-05", "visit_count": 2},
+      {"patient_id": "P2", "start_date": "2026-01-02", "end_date": "2026-01-02", "visit_count": 1},
+      {"patient_id": "P2", "start_date": "2026-02-01", "end_date": "2026-02-01", "visit_count": 1}
+    ]
+  }
+}

@@ -1,4 +1,8 @@
-# Follow-Up Call Interview Guide (45 minutes)
+# Follow-Up Interview Guide (60-75 minutes)
+
+This interview has two parts:
+1. **Take-home walkthrough** (35-40 min) - discuss their submission
+2. **Live coding session** (30 min) - one small problem, no AI
 
 ## Before the Call
 
@@ -156,6 +160,17 @@ _____________________________________
 | AI awareness and judgment | | |
 | Communication clarity | | |
 
-**Overall call impression:**
+**Overall walkthrough impression:**
 _____________________________________
 _____________________________________
+
+---
+
+## Part 2: Live Coding Session (30 minutes)
+
+Transition script:
+> "Thanks for walking through your take-home work. For the second part, we have a short coding problem. Please share your screen and use your own editor in any language. Please turn off any AI assistants or AI-powered autocomplete. You can use official language docs. Think out loud - questions are welcome."
+
+See `interview/live-coding/README.md` for the full session guide.
+Pick one problem from `interview/live-coding/problems/` (rotate across candidates).
+Fill in `interview/live-coding/scoring-sheet.md` immediately after.

@@ -50,7 +50,7 @@ AI tools (ChatGPT, Copilot, Claude, etc.) are **allowed**. Each submission must 
 
 ## Submission
 
-Submit a GitHub repository (private, invite `[GRADER_GITHUB_HANDLE]`) or a zip file containing:
+Submit a GitHub repository (private) or a zip file containing:
 
 ```
 your-submission/
@@ -60,7 +60,9 @@ your-submission/
   AI_USAGE.md           # AI tool usage disclosure
 ```
 
-Email your submission to `[EMAIL_ADDRESS]` with subject line `[SUBJECT_LINE]`.
+Reply to the assessment invitation email with a link to your repository or attach your zip file. Use subject line `SPHERES IT Assessment — [Your Name]`.
+
+For clarifying questions (max one per task), email bwidhiyanto@oucru.org or mputra@oucru.org.
 
 ---
 

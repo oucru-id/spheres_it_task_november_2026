@@ -78,13 +78,10 @@ git commit -m "SPHERES take-home assessment"
 
 ### Step 2: Fill Placeholders
 
-Before sending, update `candidate/README.md` — search for and replace:
-
-| Placeholder | Replace With |
-|-------------|-------------|
-| `[GRADER_GITHUB_HANDLE]` | Your GitHub username (for candidate to add as collaborator) |
-| `[EMAIL_ADDRESS]` | Contact email for clarifying questions |
-| `[SUBJECT_LINE]` | Email subject line format for submissions |
+Placeholders in `candidate/README.md` are already filled:
+- Contact emails: bwidhiyanto@oucru.org, mputra@oucru.org
+- Subject line: `SPHERES IT Assessment — [Candidate Name]`
+- Submission: reply to invitation email with repo link or zip
 
 ### Step 3: Verify Package
 
@@ -97,13 +94,13 @@ Before sending to any candidate, verify:
 - [ ] `.gitignore` doesn't reference private paths
 - [ ] No hint words in candidate files: `grep -ri "defect\|anomaly\|planted\|answer.key\|rubric" candidate/`
 - [ ] `candidate/task3-dinkes-report/clinic_data.sqlite` is present (binary file, ~2MB)
-- [ ] Placeholders in `candidate/README.md` are filled
+- [ ] Contact emails and subject line are correct in `candidate/README.md`
 
 ### Step 4: Send to Candidate
 
 **Email template:**
 
-> **Subject:** [SUBJECT_LINE]
+> **Subject:** SPHERES IT Assessment — Labour Recruitment
 >
 > Hi [Name],
 >
@@ -113,9 +110,9 @@ Before sending to any candidate, verify:
 > - Complete **Task 1** (required) + your choice of **Task 2 or Task 3**
 > - Recommended time: 10-11 hours total over 3 calendar days
 > - AI tools are allowed — document your usage in `AI_USAGE.md`
-> - Submit as a private GitHub repo, add `[GRADER_GITHUB_HANDLE]` as collaborator
+> - Reply to this email with a link to your private GitHub repo or attach a zip
 >
-> For clarifying questions: email [EMAIL_ADDRESS] (one question per task, must be a question that changes your approach)
+> For clarifying questions (max one per task): reply to this email or contact bwidhiyanto@oucru.org / mputra@oucru.org
 >
 > Good luck!
 

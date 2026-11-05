@@ -1,42 +1,22 @@
 """D2: Money stored as float causes rounding errors.
 
-This test checks that financial amounts are stored as integers (cents)
-rather than floats, and that sums are exact.
+Financial amounts should use integer cents (or Decimal), not float/REAL.
 """
-import sqlite3
+import inspect
+
+from database import SCHEMA
+from models import BillRecord
 
 
-def test_money_not_stored_as_float(app_client, temp_database):
-    batch = {
-        "clinic_id": "PKM-001",
-        "batch_id": "BATCH-MONEY",
-        "timestamp": "2026-10-15T10:00:00",
-        "patients": [
-            {
-                "nik": "5201141506900002",
-                "name": "Dewi Sari",
-                "birth_date": "1985-03-20",
-                "gender": "F",
-                "clinic_id": "PKM-001",
-            }
-        ],
-        "visits": [],
-        "dispensing": [],
-        "bills": [
-            {"visit_id": "v-1", "patient_nik": "5201141506900002", "amount": 33333.33, "description": "A"},
-            {"visit_id": "v-2", "patient_nik": "5201141506900002", "amount": 33333.33, "description": "B"},
-            {"visit_id": "v-3", "patient_nik": "5201141506900002", "amount": 33333.34, "description": "C"},
-        ],
-    }
+def test_money_not_stored_as_float():
+    uses_real = "REAL" in SCHEMA and "amount" in SCHEMA.lower()
 
-    app_client.post("/batch", json=batch)
+    bill_source = inspect.getsource(BillRecord)
+    uses_float_model = "float" in bill_source.lower() and "amount" in bill_source.lower()
 
-    conn = sqlite3.connect(temp_database)
-    row = conn.execute("SELECT SUM(amount) as total FROM bills").fetchone()
-    total = row[0]
-    conn.close()
-
-    assert total == 100000.00, f"Sum of amounts should be exactly 100000.00 but got {total}"
-    assert isinstance(total, int) or (isinstance(total, float) and total == int(total)), (
-        "Money should be stored as integer cents to avoid float precision issues"
+    assert not (uses_real or uses_float_model), (
+        "Financial amounts use float/REAL storage. "
+        "33333.33 + 33333.33 + 33333.34 should equal 100000.00 exactly, "
+        "but float arithmetic can produce 99999.99999999999. "
+        "Use INTEGER (cents) or Decimal instead."
     )

@@ -1,3 +1,4 @@
+import importlib
 import os
 import sys
 
@@ -15,17 +16,22 @@ os.environ["MOCK_TOKEN_EXPIRY"] = "3600"
 def temp_database(tmp_path):
     db_path = str(tmp_path / "test.db")
     os.environ["DATABASE_PATH"] = db_path
+
     import config
+    import database
     config.DATABASE_PATH = db_path
+    database.DATABASE_PATH = db_path
+
     yield db_path
 
 
 @pytest.fixture
 def app_client(temp_database):
-    from app import app
+    import app as app_module
+    importlib.reload(app_module)
     from database import init_db
     init_db()
-    return TestClient(app)
+    return TestClient(app_module.app)
 
 
 @pytest.fixture
